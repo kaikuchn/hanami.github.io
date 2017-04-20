@@ -44,6 +44,20 @@ module Web
 end
 ```
 
+Also, you need to require your shared view file in `views/application_layout.rb` file.
+
+```ruby
+require_relative './accept_json'
+
+module Web
+  module Views
+    class ApplicationLayout
+      # ...
+    end
+  end
+end
+```
+
 <p class="warning">
 Code included via <code>prepare</code> is available for ALL the views of an application.
 </p>
